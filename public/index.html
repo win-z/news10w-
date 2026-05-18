@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>潮新闻监控</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="header-brand">
+          <span class="brand-dot"></span>
+          <h1>潮新闻监控</h1>
+        </div>
+        <p class="header-desc">添加新闻后，每条都可以单独定时监控阅读量、停止监控和手动刷新。</p>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <!-- Global Settings Panel -->
+      <section class="monitor-panel">
+        <div class="panel-label">全局设置</div>
+        <form id="settings-form" class="monitor-form">
+          <div class="form-row" style="align-items: flex-end;">
+            <label class="field-label url-field" for="proxyUrl" style="flex: 1; margin-bottom: 0;">
+              <span class="label-text">全局代理出口（Clash / V2ray 代理端口）</span>
+              <input id="proxyUrl" name="proxyUrl" type="text" placeholder="可选，例如 http://127.0.0.1:7890 (留空表示直接连接)" style="width: 100%; box-sizing: border-box;" />
+            </label>
+            <button id="save-settings-btn" class="primary-btn" type="submit" style="height: 38px; min-width: 100px; padding: 0 16px; margin-left: 12px; white-space: nowrap; flex-shrink: 0;">保存设置</button>
+          </div>
+          <div class="form-row" style="margin-top: 14px; align-items: flex-end;">
+            <label class="field-label url-field" for="subscriptionUrl" style="flex: 1; margin-bottom: 0;">
+              <span class="label-text">Clash 独占多 IP 订阅链接（用于高并发固定 IP 路由，自动分配 10001+ 端口）</span>
+              <input id="subscriptionUrl" name="subscriptionUrl" type="text" placeholder="粘贴您的订阅链接，例如 https://xb1821.com/rss/..." style="width: 100%; box-sizing: border-box;" />
+            </label>
+            <div style="display: flex; gap: 8px; margin-left: 12px; flex-shrink: 0;">
+              <button id="sync-sub-btn" class="ghost-btn" type="button" style="height: 38px; padding: 0 16px; white-space: nowrap;">同步节点</button>
+              <a id="download-clash-btn" href="/api/settings/clash-config" download="news-monitor-clash.yaml" class="primary-btn" style="display: none; height: 38px; line-height: 38px; padding: 0 16px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; text-decoration: none; box-sizing: border-box; text-align: center; background-color: var(--success);">下载 Clash 配置</a>
+            </div>
+          </div>
+          <p id="settings-message" class="message" style="margin-top: 8px;"></p>
+        </form>
+      </section>
+
+      <!-- Add Form Panel -->
+      <section class="monitor-panel">
+        <div class="panel-label">添加新闻</div>
+        <form id="news-form" class="monitor-form">
+          <div class="form-row">
+            <label class="field-label" for="title">
+              <span class="label-text">新闻标题</span>
+              <input id="title" name="title" type="text" placeholder="可选，留空将自动抓取" />
+            </label>
+            <label class="field-label url-field" for="url">
+              <span class="label-text">新闻链接</span>
+              <input id="url" name="url" type="url" placeholder="https://tidenews.com.cn/news.html?id=3447701" required />
+            </label>
+          </div>
+          <div class="form-row form-row--bottom">
+            <div class="interval-group">
+              <label class="field-label mini" for="frequencyMinSeconds">
+                <span class="label-text">最小刷新间隔（秒）</span>
+                <input id="frequencyMinSeconds" name="frequencyMinSeconds" type="number" min="1" step="1" value="1" required />
+              </label>
+              <div class="interval-sep">—</div>
+              <label class="field-label mini" for="frequencyMaxSeconds">
+                <span class="label-text">最大刷新间隔（秒）</span>
+                <input id="frequencyMaxSeconds" name="frequencyMaxSeconds" type="number" min="1" step="1" value="3" required />
+              </label>
+            </div>
+            <button id="add-btn" class="primary-btn" type="submit">添加到列表</button>
+          </div>
+          <p id="message" class="message"></p>
+        </form>
+      </section>
+
+      <!-- News List -->
+      <section class="list-panel">
+        <div class="list-head">
+          <div class="list-head-left">
+            <div class="panel-label">新闻列表</div>
+          </div>
+          <button id="reload-btn" class="ghost-btn" type="button">刷新列表</button>
+        </div>
+        <div id="news-list" class="news-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <template id="news-card-template">
+      <article class="news-card">
+        <!-- Card Left: Title + URL + Status -->
+        <div class="card-identity">
+          <div class="card-title-row">
+            <h3 data-field="title"></h3>
+            <span class="status-pill" data-field="status"></span>
+          </div>
+          <a data-field="url" target="_blank" rel="noreferrer"></a>
+          <div class="proxy-node-badge" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 11.5px; font-weight: 500; color: var(--text-3);">
+            <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: var(--success);"></span>
+            <span data-field="proxyNode">直连</span>
+          </div>
+        </div>
+
+        <!-- Card Center: Stats + Settings -->
+        <div class="card-meta">
+          <div class="card-stats">
+            <div class="stat-box">
+              <span class="stat-label">当前阅读量</span>
+              <strong class="stat-value" data-field="readCount">-</strong>
+            </div>
+          </div>
+          <div class="card-settings">
+            <label class="field-label mini">
+              <span class="label-text">最小刷新间隔（秒）</span>
+              <input data-field="minSeconds" type="number" min="1" step="1" />
+            </label>
+            <label class="field-label mini">
+              <span class="label-text">最大刷新间隔（秒）</span>
+              <input data-field="maxSeconds" type="number" min="1" step="1" />
+            </label>
+            <label class="field-label mini">
+              <span class="label-text">总时长（小时）</span>
+              <input data-field="durationHours" type="number" min="0.1" max="24" step="0.1" />
+            </label>
+          </div>
+        </div>
+
+        <!-- Card Right: Actions -->
+        <div class="card-actions">
+          <button class="primary-btn toggle-btn" type="button" data-action="toggle"></button>
+          <button class="ghost-btn" type="button" data-action="fetch">刷新阅读量</button>
+          <button class="danger-btn" type="button" data-action="delete">删除</button>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

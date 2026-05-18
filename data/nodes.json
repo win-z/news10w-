@@ -1,0 +1,912 @@
+[
+  {
+    "name": "IEPL·沪港专线·HK4·空闲·1000M",
+    "type": "trojan",
+    "server": "209.248.32.115",
+    "port": 18291,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·台湾专线A·TW1·均衡·1000M",
+    "type": "trojan",
+    "server": "211.72.156.83",
+    "port": 15682,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·台湾专线A·TW3·爆满·1000M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 10226,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·A83·均衡·Netflix日本+ChatGPT解锁+沪港IEPL·500M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28126,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·A83·均衡·Netflix日本+ChatGPT解锁+沪港IEPL·500M",
+    "type": "trojan",
+    "server": "209.248.32.115",
+    "port": 28126,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·A83·均衡·Netflix日本+ChatGPT解锁+台湾隧道2·500M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28126,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·A155·均衡·Netflix日本+ChatGPT解锁+沪港IEPL·500M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28122,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·A155·均衡·Netflix日本+ChatGPT解锁+沪港IEPL·500M",
+    "type": "trojan",
+    "server": "209.248.32.115",
+    "port": 28122,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·A155·均衡·Netflix日本+ChatGPT解锁+台湾隧道2·500M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28122,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·V4·空闲·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28102,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·V4·空闲·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.115",
+    "port": 28102,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·48·空闲·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28133,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·48·空闲·台湾隧道2·1000M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28133,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·V1·均衡·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28104,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·V1·均衡·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.115",
+    "port": 28104,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·V7·均衡·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28110,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·V7·均衡·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.115",
+    "port": 28110,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·美国US·A125·爆满·Netflix美国+ChatGPT解锁+沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28125,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·美国US·A125·爆满·Netflix美国+ChatGPT解锁+沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.115",
+    "port": 28125,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·美国US·A125·爆满·Netflix美国+ChatGPT解锁+台湾隧道2·1000M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28125,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·美国US·A220·空闲·Netflix美国+ChatGPT解锁+沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28124,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·美国US·A220·空闲·Netflix美国+ChatGPT解锁+沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.115",
+    "port": 28124,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·美国US·A220·空闲·Netflix美国+ChatGPT解锁+台湾隧道2·1000M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28124,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·23·空闲·1000M",
+    "type": "trojan",
+    "server": "45.76.51.23",
+    "port": 443,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·V8·均衡·1000M",
+    "type": "trojan",
+    "server": "45.32.57.242",
+    "port": 443,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·V5·均衡·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28105,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·V5·均衡·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.115",
+    "port": 28105,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·美国US·36·空闲·500M",
+    "type": "trojan",
+    "server": "207.246.97.36",
+    "port": 443,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·美国US·40·空闲·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28130,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·美国US·40·空闲·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.115",
+    "port": 28130,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·美国US·A250·空闲·Netflix美国+ChatGPT解锁·500M",
+    "type": "trojan",
+    "server": "154.16.27.250",
+    "port": 30123,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·南非ZA·流媒体·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28144,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·南非ZA·流媒体·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28144,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·巴西BR·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28123,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·巴西BR·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28123,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·巴西BR·流媒体·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28145,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·巴西BR·流媒体·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28145,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·以色列IL·流媒体·沪港IEPL·均衡·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28167,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·以色列IL·流媒体·台湾隧道2·均衡·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28167,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·西班牙ES·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28119,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·西班牙ES·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28119,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·波兰PO·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28118,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·波兰PO·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28118,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·意大利IT·流媒体·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28166,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·意大利IT·流媒体·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28166,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·乌克兰UA·流媒体·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28164,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·乌克兰UA·流媒体·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28164,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·土耳其TR·流媒体·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28162,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·土耳其TR·流媒体·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28162,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·澳洲AU·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28161,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·澳洲AU·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28161,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·荷兰NL·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28160,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·荷兰NL·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28160,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·德国DE·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28159,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·德国DE·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28159,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·韩国KR·157·空闲·沪港IEPL·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28158,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·韩国KR·157·空闲·台湾隧道2·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28158,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·韩国KR·158·空闲·沪港IEPL·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28157,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·韩国KR·158·空闲·台湾隧道2·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28157,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·瑞典SW·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28120,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·瑞典SW·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28120,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·墨西哥MX·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28121,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·墨西哥MX·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28121,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·新加坡SP·沪港IEPL·空闲·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28153,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·新加坡SP·台湾隧道2·空闲·1000M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28153,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·英国UK·沪港IEPL·空闲·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28154,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·英国UK·台湾隧道2·空闲·1000M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28154,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·法国FR·沪港IEPL·空闲·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28155,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·法国FR·台湾隧道2·空闲·1000M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28155,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·日本JP·2·空闲·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28138,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·日本JP·2·空闲·台湾隧道2·1000M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28138,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "游戏·日本JP·243·空闲·禁视频+沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28150,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "游戏·日本JP·243·空闲·禁视频+台湾隧道2·1000M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28150,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "游戏·新加坡SP·43·空闲·禁视频+沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28147,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "游戏·新加坡SP·43·空闲·禁视频+台湾隧道2·1000M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28147,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·台湾专线A·TW2·空闲·1000M",
+    "type": "trojan",
+    "server": "61.221.84.27",
+    "port": 18427,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·台湾专线B·TW1·空闲·台湾隧道2·600M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28115,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·台湾专线B·TW2·空闲·台湾隧道2·600M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28114,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·台湾专线B·TW3·空闲·台湾隧道2·600M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28101,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·V3·空闲·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28106,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "IEPL·日本JP·V3·空闲·沪港IEPL·1000M",
+    "type": "trojan",
+    "server": "209.248.32.115",
+    "port": 28106,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·西班牙ES·流媒体·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28165,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·西班牙ES·流媒体·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28165,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·波兰PO·流媒体·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28169,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·波兰PO·流媒体·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28169,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·印度IN·流媒体·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28163,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·印度IN·流媒体·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28163,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·韩国KR·242·空闲·沪港IEPL·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28156,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·韩国KR·242·空闲·台湾隧道2·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28156,
+    "password": "i99Cef",
+    "sni": "ctldl.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·加拿大CA·沪港IEPL·空闲·200M",
+    "type": "trojan",
+    "server": "209.248.32.116",
+    "port": 28152,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  },
+  {
+    "name": "商务·加拿大CA·台湾隧道2·空闲·200M",
+    "type": "trojan",
+    "server": "211.20.156.190",
+    "port": 28152,
+    "password": "i99Cef",
+    "sni": "download.windowsupdate.com",
+    "skip-cert-verify": true,
+    "udp": true
+  }
+]
