@@ -6,6 +6,7 @@ if (!globalThis.File) {
 import express from "express";
 import fs from "node:fs/promises";
 import path from "node:path";
+import net from "node:net";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
 
@@ -226,6 +227,39 @@ async function writeDb(db) {
   await fs.writeFile(dbPath, JSON.stringify(db, null, 2), "utf8");
 }
 
+async function isProxyPortListening(proxyUrl) {
+  if (!proxyUrl) return false;
+  try {
+    const urlObj = new URL(proxyUrl);
+    const port = Number(urlObj.port);
+    const hostname = urlObj.hostname || "127.0.0.1";
+    
+    return new Promise((resolve) => {
+      const socket = new net.Socket();
+      socket.setTimeout(300); // Fast 300ms connection check
+      
+      socket.on("connect", () => {
+        socket.destroy();
+        resolve(true);
+      });
+      
+      socket.on("error", () => {
+        socket.destroy();
+        resolve(false);
+      });
+      
+      socket.on("timeout", () => {
+        socket.destroy();
+        resolve(false);
+      });
+      
+      socket.connect(port, hostname);
+    });
+  } catch (err) {
+    return false;
+  }
+}
+
 async function getProxyPortForNewsItem(itemId) {
   const db = await readDb();
   const settings = db.settings || {};
@@ -338,7 +372,13 @@ async function getBrowser() {
   }
 
   const db = await readDb();
-  const proxyUrl = db.settings?.proxyUrl;
+  let proxyUrl = db.settings?.proxyUrl;
+
+  if (proxyUrl && !(await isProxyPortListening(proxyUrl))) {
+    console.warn(`[Proxy] Global proxy ${proxyUrl} is down. Falling back to DIRECT.`);
+    proxyUrl = null;
+  }
+
   const launchOptions = {
     executablePath: await getBrowserExecutablePath(),
     headless: process.env.BROWSER_HEADLESS !== "false"
@@ -386,9 +426,20 @@ async function fetchArticleStats(itemId, url) {
 
   for (let attempt = 0; attempt < 3; attempt += 1) {
     const activeBrowser = await getBrowser();
-    const page = await activeBrowser.newPage({
-      userAgent: BROWSER_USER_AGENT
-    });
+    
+    let itemProxyUrl = await getProxyPortForNewsItem(itemId);
+    if (itemProxyUrl && !(await isProxyPortListening(itemProxyUrl))) {
+      console.warn(`[Proxy] News item ${itemId} browser proxy ${itemProxyUrl} is down. Falling back to DIRECT.`);
+      itemProxyUrl = null;
+    }
+
+    const contextOptions = { userAgent: BROWSER_USER_AGENT };
+    if (itemProxyUrl) {
+      contextOptions.proxy = { server: itemProxyUrl };
+    }
+
+    const context = await activeBrowser.newContext(contextOptions);
+    const page = await context.newPage();
 
     try {
       await page.goto(url, {
@@ -416,6 +467,7 @@ async function fetchArticleStats(itemId, url) {
       throw error;
     } finally {
       await page.close().catch(() => {});
+      await context.close().catch(() => {});
     }
   }
 
@@ -425,7 +477,7 @@ async function fetchArticleStats(itemId, url) {
 async function fetchArticleStatsByHttp(itemId, url) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);
-  const proxyUrl = await getProxyPortForNewsItem(itemId);
+  let proxyUrl = await getProxyPortForNewsItem(itemId);
 
   try {
     const fetchOptions = {
@@ -437,6 +489,11 @@ async function fetchArticleStatsByHttp(itemId, url) {
         "user-agent": BROWSER_USER_AGENT
       }
     };
+
+    if (proxyUrl && !(await isProxyPortListening(proxyUrl))) {
+      console.warn(`[Proxy] HTTP fetch proxy ${proxyUrl} is down. Falling back to DIRECT.`);
+      proxyUrl = null;
+    }
 
     if (proxyUrl) {
       process.env.HTTP_PROXY = proxyUrl;
@@ -591,7 +648,7 @@ async function visitArticlePage(itemId, url, title = "") {
 
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 10000);
-  const proxyUrl = await getProxyPortForNewsItem(itemId);
+  let proxyUrl = await getProxyPortForNewsItem(itemId);
 
   try {
     console.log(`[visit] → ${url} | OS=${platform.os} UA=${platform.browser}`);
@@ -606,6 +663,11 @@ async function visitArticlePage(itemId, url, title = "") {
         "user-agent": platform.ua
       }
     };
+
+    if (proxyUrl && !(await isProxyPortListening(proxyUrl))) {
+      console.warn(`[Proxy] Simulated visit proxy ${proxyUrl} is down. Falling back to DIRECT.`);
+      proxyUrl = null;
+    }
 
     if (proxyUrl) {
       process.env.HTTP_PROXY = proxyUrl;
